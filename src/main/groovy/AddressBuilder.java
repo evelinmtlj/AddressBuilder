@@ -33,10 +33,32 @@ public class AddressBuilder {
            } else {
                shippingStreet = enterDaa("Enter shipping street: ");
                shippingState = enterDaa("Enter shipping state: ");
-               shippingCity = enterDaa("Enter shipping city:");
+               shippingCity = enterDaa("Enter shipping city: ");
                shippingZip = enterDaa("Enter shipping zip code: ");
            }
 
+           /* here we append we create string builder for both billing address
+             and shipping address
+             for apppending its
+             StringBuilder nameyouwant = new StringBuilder();
+            string name.append(stringgoesinside).append(\n") \n creates a new line*/
+
+            StringBuilder billingAddress = new StringBuilder();
+            billingAddress.append("Billing address: \n")
+                    .append(fullName).append("\n")
+                    .append(billingStreet).append("\n")
+                    .append(billingCity).append(",").append(billingState).append(" ").append(billingZip);
+
+
+
+            StringBuilder shippingAddress = new StringBuilder();
+            shippingAddress.append("Shipping address: \n")
+                    .append(shippingStreet).append("\n")
+                    .append(shippingCity).append(",").append(shippingState).append(" ").append(shippingZip);
+
+
+
+          // now that we added shipping address and billing address lets print them out
 
 
 
